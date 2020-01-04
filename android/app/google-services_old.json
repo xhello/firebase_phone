@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "761364394898",
+    "firebase_url": "https://myrnapp-49e15.firebaseio.com",
+    "project_id": "myrnapp-49e15",
+    "storage_bucket": "myrnapp-49e15.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761364394898:android:2e0ba6f02c9f66cb",
+        "android_client_info": {
+          "package_name": "com.tinfit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "761364394898-8scvlrlrm2cbha4mrcrmk41l176ekjak.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDcNzTfgCBfozY2mgk9zD25INhgQk-gRk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "761364394898-8scvlrlrm2cbha4mrcrmk41l176ekjak.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "761364394898-qu5m3lrlpcbnr7c0s4d6eafhvif71nks.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.Manager"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>761364394898-0higs5ja0f3ac61e7g9bd1kmsr8df86i.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.761364394898-0higs5ja0f3ac61e7g9bd1kmsr8df86i</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>761364394898-lpdkvafqq5a99qh0rm3cm7a3r5vjaifb.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC8g3U2JNvqdkqf30tgKuKQGYGJQLT0S90</string>
+	<key>GCM_SENDER_ID</key>
+	<string>761364394898</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.magnifyall.Tinfit</string>
+	<key>PROJECT_ID</key>
+	<string>myrnapp-49e15</string>
+	<key>STORAGE_BUCKET</key>
+	<string>myrnapp-49e15.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:761364394898:ios:d6dd71796dc79f86d0874b</string>
+	<key>DATABASE_URL</key>
+	<string>https://myrnapp-49e15.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,84 @@
+import { StyleSheet } from "react-native";
+
+export default StyleSheet.create({
+  topGrayArea:{
+    height:300,
+    width:'100%',
+    backgroundColor:'#EFEFEF',
+    justifyContent:'center',
+    alignItems:'center',
+    paddingTop:30
+  },
+  profilePic:{
+    width:80,
+    height:80,
+    borderRadius:10
+  },
+  userNameText:{
+    fontSize:20,
+    color:'#4D4D4D',
+    marginTop:10
+  },
+  ratingRow:{
+    flexDirection:'row',
+    height:20,
+    alignItems:'center',
+    justifyContent:'center'
+  },
+  star:{
+    width:15,
+    height:15
+  },
+  symbolRow:{
+    flexDirection:'row',
+    marginTop:5,
+    height:25,
+    alignItems:'center',
+    justifyContent:'center'
+  },
+  gymIcon:{
+    width:20,
+    height:20
+  },
+  rateFont:{
+    fontSize:20,
+    color:'#4D4D4D',
+    marginLeft:10
+  },
+  menuArea:{
+    width:'100%'
+  },
+  menuItem:{
+    height:60,
+    borderBottomWidth:0.5,
+    borderColor:'#9D9D9D',
+    alignItems:'flex-start',
+    justifyContent:'center',
+    paddingLeft:15
+  },
+  menuText:{
+    fontSize:16,
+    color:'#4D4D4D'
+  },
+  logoutButton:{
+    height:40,
+    width:95,
+    borderWidth:1,
+    borderColor:'#FE007A',
+    alignItems:'center',
+    justifyContent:'center',
+    borderRadius:10,
+    marginTop:100
+    // top:'10%'
+    // position:'absolute',
+    // bottom: 0
+  },
+  logoutButtonFont:{
+    color:'#FE007A',
+    fontSize:16
+  },
+  drawerBottomArea:{
+    height:'80%',
+    alignItems:'center'
+  }
+});

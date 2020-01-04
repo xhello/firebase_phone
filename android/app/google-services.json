@@ -1,0 +1,80 @@
+{
+  "project_info": {
+    "project_number": "761364394898",
+    "firebase_url": "https://myrnapp-49e15.firebaseio.com",
+    "project_id": "myrnapp-49e15",
+    "storage_bucket": "myrnapp-49e15.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761364394898:android:2e0ba6f02c9f66cb",
+        "android_client_info": {
+          "package_name": "com.tinfit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "761364394898-m0tqs9ckf51lcabtocrjfu1ckdki5no2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tinfit",
+            "certificate_hash": "f295ff37b87d25d52a4a51ec6d3619136802aa8e"
+          }
+        },
+        {
+          "client_id": "761364394898-h6k7j4ssvbm9gdmdhm8m8775b2psq870.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tinfit",
+            "certificate_hash": "04ae74ac44778f7169e2b64b9b434dfa2aa9e304"
+          }
+        },
+        {
+          "client_id": "761364394898-lf74564jf910tkndib8ho5162o47j5ns.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tinfit",
+            "certificate_hash": "63a969d9855ecdbfc583cd056f5f28e4f8e39900"
+          }
+        },
+        {
+          "client_id": "761364394898-lpdkvafqq5a99qh0rm3cm7a3r5vjaifb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tinfit",
+            "certificate_hash": "f94080767ffc4cdc2d60b5996f605ee9a8baaa25"
+          }
+        },
+        {
+          "client_id": "761364394898-8scvlrlrm2cbha4mrcrmk41l176ekjak.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDcNzTfgCBfozY2mgk9zD25INhgQk-gRk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "761364394898-8scvlrlrm2cbha4mrcrmk41l176ekjak.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "761364394898-0higs5ja0f3ac61e7g9bd1kmsr8df86i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.magnifyall.Tinfit",
+                "app_store_id": "1472358753"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

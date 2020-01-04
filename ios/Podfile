@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+#platform :ios, '9.0'
+
+target 'Tinfit' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  #use_frameworks!
+
+  platform :ios, '9.0'
+  # Pods for Tinfit
+  # Required by RNFirebase
+  pod 'Firebase/Core', '~> 6.3.0'
+  pod 'Firebase/Auth', '~> 6.3.0'
+  pod 'Firebase/Database', '~> 6.3.0'
+  pod 'Firebase/Storage', '~> 6.3.0'
+  pod 'Firebase/Messaging', '~> 6.3.0'
+
+  # pod 'react-native-slider', :path => '../node_modules/@react-native-community/slider'
+
+  # pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+ # pod 'react-native-maps', :path => '../node_modules/react-native-maps'
+
+end

@@ -98,7 +98,7 @@ export default class LoginScreen extends Component {
 
   confirmCode = () => {
     const { codeInput, confirmResult } = this.state;
-    if (codeInput)
+    if (codeInput) {
       if (confirmResult && codeInput.length) {
         confirmResult.confirm(codeInput)
           .then((user) => {
@@ -113,9 +113,35 @@ export default class LoginScreen extends Component {
                 errorToShow: "Invalid Code, Please try again!"
               });
             }, 100);
+            firebase.database().ref('/errors/').push({
+              error: error
+            })
             console.log(error);
           });
       }
+      else {
+        setTimeout(() => {
+          this.setState({
+            isShowError: true,
+            errorToShow: "Invalid Code, Please try again!"
+          });
+        }, 100);
+        firebase.database().ref('/errors/').push({
+          error: "ERR1"
+        })
+      }
+    }
+    else {
+      setTimeout(() => {
+        this.setState({
+          isShowError: true,
+          errorToShow: "Invalid Code, Please try again!"
+        });
+      }, 100);
+      firebase.database().ref('/errors/').push({
+        error: "ERR2"
+      })
+    }
   };
 
   getUserMoreInfo = (uid, mobile) => {

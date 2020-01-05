@@ -282,7 +282,7 @@ export default class MatchScreen extends Component {
         var indexInRequestedBackList = _.findIndex(requestedBackClientList, (o) => { return o.uid == item.uid; });
         console.log("indexInRequestedList - ", indexInRequestedList);
         if (index > -1 && indexInRequestedList > -1) {
-          clientList[index].price = requestedTrainerList[indexInRequestedList] ? requestedBackClientList[indexInRequestedList].currentPrice : 0;
+          clientList[index].price = requestedClientList[indexInRequestedList] ? requestedBackClientList[indexInRequestedList].currentPrice : 0;
           clientList[index].userCode = requestedClientList[indexInRequestedList].userCode;
           clientList[index].userCodeToRequest = requestedBackClientList[indexInRequestedBackList].userCode;
           clientList[index].userListedIn = "Clients"

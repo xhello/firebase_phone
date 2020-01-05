@@ -30,6 +30,21 @@ export default class LoginScreen extends Component {
       isMobileNumberSubmitted: false
     };
   }
+  componentDidMount() {
+    firebase.auth().onAuthStateChanged(async (user) => {
+      if (user) {
+        await AsyncStorage.setItem(
+          "userToken",
+          user.phoneNumber
+        );
+        const resetAction = StackActions.reset({
+          index: 0,
+          actions: [NavigationActions.navigate({ routeName: 'Profile' })],
+        });
+        this.props.navigation.dispatch(resetAction);
+      }
+    })
+  }
 
   setIntroCompleted = async () => {
     console.warn("setIntroCompleted");

@@ -24,6 +24,8 @@ import SnackBar from "react-native-snackbar-component";
 
 import styles from "./style";
 import MapScreen from "../map_screen/MapScreen";
+import { StackActions, NavigationActions } from 'react-navigation';
+
 
 export default class HomeScreen extends Component {
   constructor(props) {
@@ -109,7 +111,16 @@ export default class HomeScreen extends Component {
 
   componentDidMount() {
 
-
+    firebase.auth().onAuthStateChanged(async (user) => {
+      if (!user) {
+        await AsyncStorage.removeItem("userToken");
+        const resetAction = StackActions.reset({
+          index: 0,
+          actions: [NavigationActions.navigate({ routeName: 'SignIn' })],
+        });
+        this.props.navigation.dispatch(resetAction);
+      }
+    })
     // this.notificationListener = firebase.notifications().onNotification((Notification) => {
     //   console.warn("########--------", Notification);
     //   firebase.notifications().setBadge(parseInt(firebase.notifications().getBadge()) + 1)

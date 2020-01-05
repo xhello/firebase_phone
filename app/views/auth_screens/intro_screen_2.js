@@ -22,18 +22,18 @@ export default class LoginScreen extends Component {
       errorToShow: ""
     };
   }
-  didTapNextButton = () =>{
+  didTapNextButton = () => {
     this.props.navigation.navigate("Intro3");
   }
 
-  didTapSkipButton = () =>{
+  didTapSkipButton = () => {
     this.props.navigation.navigate("SignIn");
   }
 
   render() {
     return (
       <SafeAreaView style={{ flex: 1 }}>
-        
+
         <ScrollView
           contentContainerStyle={styles.container}
           showsVerticalScrollIndicator={false}
@@ -41,8 +41,8 @@ export default class LoginScreen extends Component {
 
           <Text style={styles.titileFont}>TinFit</Text>
           <Text style={styles.titileFont3}>You can request your client or trainer from the home page</Text>
-            <Image source={require('../../res/images/intro_2.png')} style={styles.introImage2} />
-        
+          <Image source={require('../../res/images/intro_2_new.png')} style={styles.introImage2} />
+
           <TouchableOpacity
             onPress={this.didTapNextButton}
             style={styles.introNextButton}
@@ -74,7 +74,7 @@ export default class LoginScreen extends Component {
             onPress={() => this.didTapSkipButton()}
             style={styles.skipTextRow}
           >
-            
+
             <Text style={styles.signUpFont_2}>Skip</Text>
           </TouchableOpacity>
         </ScrollView>

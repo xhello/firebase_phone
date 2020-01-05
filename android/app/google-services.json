@@ -15,35 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "761364394898-m0tqs9ckf51lcabtocrjfu1ckdki5no2.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.tinfit",
-            "certificate_hash": "f295ff37b87d25d52a4a51ec6d3619136802aa8e"
-          }
-        },
-        {
           "client_id": "761364394898-h6k7j4ssvbm9gdmdhm8m8775b2psq870.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.tinfit",
             "certificate_hash": "04ae74ac44778f7169e2b64b9b434dfa2aa9e304"
-          }
-        },
-        {
-          "client_id": "761364394898-lf74564jf910tkndib8ho5162o47j5ns.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.tinfit",
-            "certificate_hash": "63a969d9855ecdbfc583cd056f5f28e4f8e39900"
-          }
-        },
-        {
-          "client_id": "761364394898-lpdkvafqq5a99qh0rm3cm7a3r5vjaifb.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.tinfit",
-            "certificate_hash": "f94080767ffc4cdc2d60b5996f605ee9a8baaa25"
           }
         },
         {

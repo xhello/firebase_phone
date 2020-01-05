@@ -20,7 +20,7 @@ export default class LoginScreen extends Component {
     super(props);
     this.setIntroCompleted();
     this.state = {
-      selectedCountryCode:"+1",
+      selectedCountryCode: "+1",
       typedMobileNumber: "",
       typedPassword: "",
       user: null,
@@ -57,7 +57,7 @@ export default class LoginScreen extends Component {
       }, 100);
     } else {
       if (this.phone.isValidNumber()) {
-        this.submitMobileNumber(typedNumber);  
+        this.submitMobileNumber(typedNumber);
       } else {
         setTimeout(() => {
           this.setState({
@@ -66,7 +66,7 @@ export default class LoginScreen extends Component {
           });
         }, 100);
       }
-      
+
     }
   };
 
@@ -80,32 +80,42 @@ export default class LoginScreen extends Component {
         setTimeout(() => {
           this.setState({ confirmResult, message: 'Code has been sent!', isLoading: false, isMobileNumberSubmitted: true });
         }, 1000);
-        
+
         console.warn(confirmResult);
       })
-      .catch(error => console.log(error));
+      .catch(error => {
+
+        setTimeout(() => {
+          this.setState({
+            isShowError: true,
+            errorToShow: "Unable to send code to your number, please try again",
+            isLoading: false
+          });
+        }, 100);
+        console.warn(error.message)
+      });
   };
 
   confirmCode = () => {
     const { codeInput, confirmResult } = this.state;
-
-    if (confirmResult && codeInput.length) {
-      confirmResult.confirm(codeInput)
-        .then((user) => {
-          this.setState({ message: 'Code Confirmed!', user: user });
-          console.log("Code Confirmed!", user)
-          this.getUserMoreInfo(user._user.uid, user._user.phoneNumber);
-        })
-        .catch(error => {
-          setTimeout(() => {
-            this.setState({
-              isShowError: true,
-              errorToShow: "Invalid Code, Please try again!"
-            });
-          }, 100);
-          console.log(error);
-        });
-    }
+    if (codeInput)
+      if (confirmResult && codeInput.length) {
+        confirmResult.confirm(codeInput)
+          .then((user) => {
+            this.setState({ message: 'Code Confirmed!', user: user });
+            console.log("Code Confirmed!", user)
+            this.getUserMoreInfo(user._user.uid, user._user.phoneNumber);
+          })
+          .catch(error => {
+            setTimeout(() => {
+              this.setState({
+                isShowError: true,
+                errorToShow: "Invalid Code, Please try again!"
+              });
+            }, 100);
+            console.log(error);
+          });
+      }
   };
 
   getUserMoreInfo = (uid, mobile) => {
@@ -132,7 +142,7 @@ export default class LoginScreen extends Component {
 
         },
         error => {
-          this.setState({isLoading:false})
+          this.setState({ isLoading: false })
           console.log("Error: " + error);
         }
       );
@@ -161,8 +171,8 @@ export default class LoginScreen extends Component {
         myClientProfile: { about: "", price: "" }
       })
       .catch(function (error) {
-        this.setState({isLoading:false})
-        console.error("Error while updating fields to db in signup mehtod: ",error);
+        this.setState({ isLoading: false })
+        console.error("Error while updating fields to db in signup mehtod: ", error);
       });
     this.signUpToApp();
     // console.log(`Signed with user: ${JSON.stringify(loggedUser)}`);
@@ -186,9 +196,9 @@ export default class LoginScreen extends Component {
     this.setState({
       isLoading: false
     });
-    
+
   }
-  
+
   signInToApp = async () => {
     console.log('signInToApp called')
     try {
@@ -231,11 +241,11 @@ export default class LoginScreen extends Component {
       return true;
     }
   };
-  selectCountry(country){
-    var countrySelected =  this.phone.getCountryCode(country.iso2)
+  selectCountry(country) {
+    var countrySelected = this.phone.getCountryCode(country.iso2)
     console.warn(countrySelected);
     this.setState({
-      selectedCountryCode:'+'+countrySelected
+      selectedCountryCode: '+' + countrySelected
     })
   }
 
@@ -265,14 +275,14 @@ export default class LoginScreen extends Component {
           {!this.state.isMobileNumberSubmitted && <Text style={styles.intoText}>Enter your mobile number to login or join</Text>}
           {this.state.isMobileNumberSubmitted && <Text style={styles.intoText}>Enter 6-digit code you received via SMS</Text>}
           {!this.state.isMobileNumberSubmitted &&
-          
+
             <View style={styles.emailInputView}>
               <PhoneInput
                 ref={(ref) => { this.phone = ref; }}
                 value={this.state.selectedCountryCode}
-                onSelectCountry = {(country)=>this.selectCountry(country)}
-                textProps={{placeholder: 'Phone number with country code (+1)'}}              
-            />
+                onSelectCountry={(country) => this.selectCountry(country)}
+                textProps={{ placeholder: 'Phone number with country code (+1)' }}
+              />
               {/* <Image
                 source={require("../../res/images/phone_icon.png")}
                 style={styles.inputIcon}

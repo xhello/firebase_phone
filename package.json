@@ -14,7 +14,7 @@
     "geolib": "^3.0.4",
     "native-base": "^2.13.8",
     "react": "16.8.6",
-    "react-native": "^0.60.4",
+    "react-native": "^0.62.3",
     "react-native-collapsible": "^1.5.1",
     "react-native-dialog": "^5.6.0",
     "react-native-firebase": "~5.5.4",
